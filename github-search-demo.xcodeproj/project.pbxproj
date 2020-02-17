@@ -14,6 +14,13 @@
 		FC85FD3D23FAC18500665A77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC85FD3C23FAC18500665A77 /* Preview Assets.xcassets */; };
 		FC85FD4023FAC18500665A77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC85FD3E23FAC18500665A77 /* LaunchScreen.storyboard */; };
 		FC85FD4B23FAC18500665A77 /* github_search_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD4A23FAC18500665A77 /* github_search_demoTests.swift */; };
+		FC85FD5923FAC25700665A77 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD5823FAC25700665A77 /* Repository.swift */; };
+		FC85FD5B23FAC45900665A77 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD5A23FAC45900665A77 /* SearchResponse.swift */; };
+		FC85FD5E23FAC56700665A77 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD5D23FAC56700665A77 /* SearchService.swift */; };
+		FC85FD6123FAD54600665A77 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD6023FAD54600665A77 /* SearchView.swift */; };
+		FC85FD6323FAD5FA00665A77 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD6223FAD5FA00665A77 /* SearchViewModel.swift */; };
+		FC85FD6623FADAFF00665A77 /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD6523FADAFF00665A77 /* SearchResultRow.swift */; };
+		FC85FD6823FADB0C00665A77 /* SearchResultRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85FD6723FADB0C00665A77 /* SearchResultRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,13 @@
 		FC85FD4623FAC18500665A77 /* github-search-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "github-search-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC85FD4A23FAC18500665A77 /* github_search_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_search_demoTests.swift; sourceTree = "<group>"; };
 		FC85FD4C23FAC18500665A77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC85FD5823FAC25700665A77 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		FC85FD5A23FAC45900665A77 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		FC85FD5D23FAC56700665A77 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		FC85FD6023FAD54600665A77 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		FC85FD6223FAD5FA00665A77 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		FC85FD6523FADAFF00665A77 /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
+		FC85FD6723FADB0C00665A77 /* SearchResultRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,9 @@
 		FC85FD3223FAC18200665A77 /* github-search-demo */ = {
 			isa = PBXGroup;
 			children = (
+				FC85FD5F23FAD52D00665A77 /* View */,
+				FC85FD5C23FAC54400665A77 /* API */,
+				FC85FD5523FAC23700665A77 /* Model */,
 				FC85FD3323FAC18200665A77 /* AppDelegate.swift */,
 				FC85FD3523FAC18200665A77 /* SceneDelegate.swift */,
 				FC85FD3723FAC18200665A77 /* ContentView.swift */,
@@ -105,6 +122,42 @@
 				FC85FD4C23FAC18500665A77 /* Info.plist */,
 			);
 			path = "github-search-demoTests";
+			sourceTree = "<group>";
+		};
+		FC85FD5523FAC23700665A77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC85FD5823FAC25700665A77 /* Repository.swift */,
+				FC85FD5A23FAC45900665A77 /* SearchResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC85FD5C23FAC54400665A77 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FC85FD5D23FAC56700665A77 /* SearchService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FC85FD5F23FAD52D00665A77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC85FD6423FADAC800665A77 /* SearchResultRow */,
+				FC85FD6023FAD54600665A77 /* SearchView.swift */,
+				FC85FD6223FAD5FA00665A77 /* SearchViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC85FD6423FADAC800665A77 /* SearchResultRow */ = {
+			isa = PBXGroup;
+			children = (
+				FC85FD6523FADAFF00665A77 /* SearchResultRow.swift */,
+				FC85FD6723FADB0C00665A77 /* SearchResultRowViewModel.swift */,
+			);
+			path = SearchResultRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +263,14 @@
 			files = (
 				FC85FD3423FAC18200665A77 /* AppDelegate.swift in Sources */,
 				FC85FD3623FAC18200665A77 /* SceneDelegate.swift in Sources */,
+				FC85FD6323FAD5FA00665A77 /* SearchViewModel.swift in Sources */,
 				FC85FD3823FAC18200665A77 /* ContentView.swift in Sources */,
+				FC85FD6823FADB0C00665A77 /* SearchResultRowViewModel.swift in Sources */,
+				FC85FD6123FAD54600665A77 /* SearchView.swift in Sources */,
+				FC85FD6623FADAFF00665A77 /* SearchResultRow.swift in Sources */,
+				FC85FD5E23FAC56700665A77 /* SearchService.swift in Sources */,
+				FC85FD5B23FAC45900665A77 /* SearchResponse.swift in Sources */,
+				FC85FD5923FAC25700665A77 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
