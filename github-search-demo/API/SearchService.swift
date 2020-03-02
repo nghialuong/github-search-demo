@@ -9,6 +9,10 @@
 import Foundation
 import Combine
 
+protocol SearchProtocol {
+    func search(matching query: String) -> AnyPublisher<SearchResponse, Error>
+}
+
 class SearchService {
     private let session: URLSession
     private let decoder: JSONDecoder
@@ -20,12 +24,7 @@ class SearchService {
     }
 }
 
-enum SearchError: Error {
-    case network(description: String)
-    case unknow(description: String)
-}
-
-extension SearchService {
+extension SearchService:SearchProtocol {
     static let token = "cc9d8c65f8084835bee44ae518b38555566cefaf"
     
     func search(matching query: String) -> AnyPublisher<SearchResponse, Error> {
