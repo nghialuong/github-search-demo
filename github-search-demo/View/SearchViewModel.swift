@@ -20,7 +20,7 @@ class SearchViewModel: ObservableObject {
         self.searchAPI = searchAPI
         $searchText
             .dropFirst(1)
-            .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
+            .debounce(for: .seconds(0.2), scheduler: DispatchQueue.main)
             .sink(receiveValue: search(with:))
             .store(in: &disposable)
     }

@@ -18,21 +18,26 @@ class SearchService {
         self.session = session
         self.decoder = decoder
     }
-    
 }
 
 enum SearchError: Error {
     case network(description: String)
+    case unknow(description: String)
 }
 
 extension SearchService {
+    static let token = "cc9d8c65f8084835bee44ae518b38555566cefaf"
+    
     func search(matching query: String) -> AnyPublisher<SearchResponse, Error> {
         guard let url = URL(string: "https://api.github.com/search/repositories?q=\(query)") else {
             let error = SearchError.network(description: "Could not create URL.")
-            return Fail(error: error).eraseToAnyPublisher()
+            return Fail(error: error)
+                .eraseToAnyPublisher()
         }
+        var request = URLRequest(url: url)
+        request.addValue(SearchService.token, forHTTPHeaderField: "Authorization")
         
-        return session.dataTaskPublisher(for: url)
+        return session.dataTaskPublisher(for: request)
             .map { $0.data }
             .decode(type: SearchResponse.self, decoder: decoder)
             .eraseToAnyPublisher()

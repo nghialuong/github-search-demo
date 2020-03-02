@@ -10,18 +10,16 @@ import Foundation
 
 struct Repository: Decodable {
     var id: Int
-    let owner: Owner
+    let owner: Owner?
     let name: String
-    let description: String
+    let description: String?
     
     struct Owner: Decodable {
-        let avatar: URL
-        
+        let avatar: URL?
         enum CodingKeys: String, CodingKey {
             case avatar = "avatar_url"
         }
     }
-    
 }
 
 

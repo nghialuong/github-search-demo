@@ -23,7 +23,7 @@ struct SearchView: View {
             List {
                 //                VStack(alignment: .center) {
                 HStack(alignment: .center) {
-                    TextField("search em di anh", text: $viewModel.searchText)
+                    TextField("search me now ... ", text: $viewModel.searchText)
                 }
                 //                }
                 
