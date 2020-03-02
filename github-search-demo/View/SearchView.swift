@@ -10,7 +10,6 @@ import SwiftUI
 import Combine
 
 struct SearchView: View {
-    
     @ObservedObject private var viewModel: SearchViewModel
     
     init(viewModel: SearchViewModel) {
@@ -19,19 +18,17 @@ struct SearchView: View {
     
     var body: some View {
         NavigationView {
-            
-            List {
-                //                VStack(alignment: .center) {
-                HStack(alignment: .center) {
-                    TextField("search me now ... ", text: $viewModel.searchText)
-                }
-                //                }
+            VStack(alignment: .leading) {
+                TextField("search me now ... ", text: $viewModel.searchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                Section {
-                    ForEach(self.viewModel.dataSource, content: SearchResultRow.init)
+                List {
+                    Section {
+                        ForEach(self.viewModel.dataSource, content: SearchResultRow.init)
+                    }
                 }
-            }
-            .navigationBarTitle("Search")
+            }.padding()
+                .navigationBarTitle("Search")
         }
     }
 }
