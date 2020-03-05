@@ -18,7 +18,7 @@ struct SearchView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
+            VStack() {
                 TextField("search me now ... ", text: $viewModel.searchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 

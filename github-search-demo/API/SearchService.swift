@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-protocol SearchProtocol {
+protocol Searchable {
     func search(matching query: String) -> AnyPublisher<SearchResponse, Error>
 }
 
@@ -24,7 +24,7 @@ class SearchService {
     }
 }
 
-extension SearchService:SearchProtocol {
+extension SearchService: Searchable {
     static let token = "cc9d8c65f8084835bee44ae518b38555566cefaf"
     
     func search(matching query: String) -> AnyPublisher<SearchResponse, Error> {

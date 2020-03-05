@@ -13,10 +13,10 @@ class SearchViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var dataSource: [SearchResultRowViewModel] = []
     
-    private let searchAPI: SearchProtocol
+    private let searchAPI: Searchable
     private var disposable = Set<AnyCancellable>()
     
-    init(searchAPI: SearchProtocol) {
+    init(searchAPI: Searchable) {
         self.searchAPI = searchAPI
         $searchText
             .dropFirst(1)
